@@ -6,11 +6,23 @@ var clock = new Vue({
   }
 });
 
-var timerID = setInterval(paivitaAika, 1000);
-paivitaAika();
 
-function paivitaAika() {
+var utc = 0;
+function haeTunnit(tunnit) {
+  var value = tunnit
+  value = parseInt(value)
+  utc = value;
+  return utc;
+}
+
+var timerID = setInterval('paivitaAika(utc)', 1000);
+paivitaAika(utc);
+
+function paivitaAika(tunnit) {
   var cd = new Date();
+  if (tunnit){
+    cd.setHours(cd.getHours() + tunnit)
+  }
   clock.time = kelloTaulu(cd.getHours(), 2) +':'+
               kelloTaulu(cd.getMinutes(), 2) +':'+
               kelloTaulu(cd.getSeconds(), 2);
@@ -25,6 +37,13 @@ function kelloTaulu(numero, digi) {
   return (nolla + numero).slice(-digi);
 }
 
+
+var zone = new Vue({
+  el: '#selector-of-timezone',
+  data: {
+    timezone: ''
+  }
+})
 
 //Tämän alle laitetaan geolocation - ominaisuus
 
