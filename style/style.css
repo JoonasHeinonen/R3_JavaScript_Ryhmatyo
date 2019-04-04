@@ -1,0 +1,99 @@
+#clock-area {
+    background-color: white;
+    border-color: #ededed;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 6px;
+    width: 400px;
+    margin: auto;
+}
+
+#clock {
+    height: 10%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 46px;
+    font-weight: bold;
+    padding: 16px;
+    color: grey;
+    display: flex;
+    justify-content: center;
+    border-color: #ededed;
+    border-bottom: 1px solid #ededed;
+}
+
+#text-area {
+    height: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    color: grey;
+    display: flex;
+    justify-content: center;
+}
+
+.list {
+    list-style-type: none;
+}
+
+#selector-of-timezone {
+    height: 100%;
+    padding: 10px 50px 10px 68px;
+    background: #fff;
+    border: 1px solid #ededed;
+    color: grey;
+    border-radius: 6px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    margin: auto;
+}
+
+body {
+  background: #fff;
+}
+
+svg{
+	stroke: #000;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#rim {
+  fill: none;
+  stroke: #999;
+  stroke-width: 3px;
+}
+
+.second-hand{
+	stroke-width:3;
+
+}
+
+.minute-hand{
+	stroke-width:8;
+	stroke-linecap:round;
+}
+
+.hour-hand{
+	stroke-width:12;
+	stroke-linecap:round;
+}
+
+.hands-cover{
+	stroke-width:3;
+	fill:#fff;
+}
+
+.second-tick{
+	stroke-width:3;
+	fill:#000;
+}
+
+.hour-tick{
+	stroke-width:8; //same as the miute hand
+}
+
+.second-label{
+	font-size: 12px;
+}
+
+.hour-label{
+	font-size: 24px;
+}
