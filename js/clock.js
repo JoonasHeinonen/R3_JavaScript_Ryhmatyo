@@ -27,3 +27,13 @@ function kelloTaulu(numero, digi) {
 
 
 //Tämän alle laitetaan geolocation - ominaisuus
+
+var loc = document.getElementById("sijainti");
+
+function haeSijainti() {
+
+}
+
+function naytaSijainti(sijainti) {
+  loc.innerHTML = "Leveysaste: " + "Pituusaste: ";
+}
