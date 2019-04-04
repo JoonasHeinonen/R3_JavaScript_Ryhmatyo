@@ -24,3 +24,6 @@ function kelloTaulu(numero, digi) {
   }
   return (nolla + numero).slice(-digi);
 }
+
+
+//Tämän alle laitetaan geolocation - ominaisuus
