@@ -28,12 +28,23 @@ function kelloTaulu(numero, digi) {
 
 //Tämän alle laitetaan geolocation - ominaisuus
 
-var loc = document.getElementById("sijainti");
+var loc = new Vue({
+  el: '#navigator',
+  data: {
+    location: ''
+  }
+});
+
 
 function haeSijainti() {
-
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(naytaSijainti);
+  }
 }
 
 function naytaSijainti(sijainti) {
-  loc.innerHTML = "Leveysaste: " + "Pituusaste: ";
+  loc.innerHTML = "Leveysaste: "
+   + position.coords.latitude
+   + "Pituusaste: "
+   + position.coords.longitude;
 }
