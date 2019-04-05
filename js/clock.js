@@ -8,11 +8,19 @@ var clock = new Vue({
 
 
 var timerID = setInterval('paivitaAika(utc)', 1000);
-paivitaAika(utc);
+paivitaAika();
 
 function paivitaAika(tunnit) {
   var cd = new Date();
   if (tunnit){
+    if(tunnit == -125 || tunnit == -65){
+      cd.setMinutes(cd.getMinutes() - 30)
+      tunnit = (tunnit+5)/10
+    }
+    else if(tunnit == 05 || tunnit == 15 || tunnit == 25 ||tunnit == 35 || tunnit == 75){
+      cd.setMinutes(cd.getMinutes() + 30)
+      tunnit = (tunnit-5)/10
+    }
     cd.setHours(cd.getHours() + tunnit)
   }
   clock.time = kelloTaulu(cd.getHours(), 2) +':'+
