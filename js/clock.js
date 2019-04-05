@@ -7,14 +7,6 @@ var clock = new Vue({
 });
 
 
-var utc = 0;
-function haeTunnit(tunnit) {
-  var value = tunnit
-  value = parseInt(value)
-  utc = value;
-  return utc;
-}
-
 var timerID = setInterval('paivitaAika(utc)', 1000);
 paivitaAika(utc);
 
@@ -37,11 +29,19 @@ function kelloTaulu(numero, digi) {
   return (nolla + numero).slice(-digi);
 }
 
-
+var utc = 0;
 var zone = new Vue({
   el: '#selector-of-timezone',
   data: {
     timezone: ''
+  },
+  methods: {
+    onChange(event) {
+      var value = event.target.value
+      value = parseInt(value)
+      utc = value;
+      return utc;
+    }
   }
 })
 

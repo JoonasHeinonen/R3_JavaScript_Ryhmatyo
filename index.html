@@ -27,7 +27,7 @@
                 </ul>
             </div>
             <p><label for="selector-of-timezone">
-                <select id="selector-of-timezone" onchange="haeTunnit(this.value)">
+                <select id="selector-of-timezone" @change="onChange($event)" v-model="timezone">
                     <option disabled selected value>Choose a timezone</option>
                     <option value="-15">UTC-12</option>
                     <option value="-14">UTC-11</option>
