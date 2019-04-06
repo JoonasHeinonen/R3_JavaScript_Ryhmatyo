@@ -55,6 +55,32 @@ var zone = new Vue({
 
 //Tämän alle laitetaan geolocation - ominaisuus
 
+
+
+ new Vue({
+ el: '#sijaintiTieto',
+
+  data: {
+	  pituus:''
+  },
+   methods:{
+    sijainti: function () {
+	 if(navigator.geolocation){
+	 navigator.geolocation.getCurrentPosition(this.naytaPituus);
+
+
+	 }
+    },
+	naytaPituus:function (position) {
+		this.pituus = position.coords.longitude;
+	 }
+	}
+
+});
+
+
+/*
+
 var loc = new Vue({
   el: '#navigator',
   data: {
@@ -75,3 +101,4 @@ function naytaSijainti(sijainti) {
    + "Pituusaste: "
    + position.coords.longitude;
 }
+*/
