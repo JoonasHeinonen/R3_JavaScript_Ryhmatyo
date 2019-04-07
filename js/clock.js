@@ -1,4 +1,6 @@
 
+sijainti();
+
 var clock = new Vue({
   el: '#clock',
   data: {
@@ -77,28 +79,3 @@ var zone = new Vue({
 	}
 
 });
-
-
-/*
-
-var loc = new Vue({
-  el: '#navigator',
-  data: {
-    location: ''
-  }
-});
-
-
-function haeSijainti() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(naytaSijainti);
-  }
-}
-
-function naytaSijainti(sijainti) {
-  loc.innerHTML = "Leveysaste: "
-   + position.coords.latitude
-   + "Pituusaste: "
-   + position.coords.longitude;
-}
-*/
