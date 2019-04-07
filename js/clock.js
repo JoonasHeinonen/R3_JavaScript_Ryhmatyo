@@ -1,6 +1,4 @@
 
-sijainti();
-
 var clock = new Vue({
   el: '#clock',
   data: {
