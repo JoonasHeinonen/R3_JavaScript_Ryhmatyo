@@ -75,5 +75,8 @@ var zone = new Vue({
 		this.pituus = position.coords.longitude;
 	 }
 	}
+if (pituus > 18) {
+  document.getElementById("demo").innerHTML = "Good day!";
+}
 
 });
