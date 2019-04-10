@@ -17,8 +17,11 @@ function paivitaAika(tunnit) {
       cd.setMinutes(cd.getMinutes() - 30);
       tunnit += 1
     }
-    else if(tunnit == 0.5 || tunnit == 1.5 || tunnit == 2.5 ||tunnit == 3.5 || tunnit == 7.5){
+    else if(tunnit == 0.5 || tunnit == 1.5 || tunnit == 2.5 ||tunnit == 3.5 || tunnit == 6.5 || tunnit == 7.5){
       cd.setMinutes(cd.getMinutes() + 30);
+    }
+    else if(tunnit == 2.75 || tunnit == 5.75 || tunnit == 9.75){
+      cd.setMinutes(cd.getMinutes() + 45);
     }
     cd.setHours(cd.getHours() + tunnit)
   }
@@ -44,7 +47,7 @@ var zone = new Vue({
   },
   methods: {
     onChange(event) {
-      var tuntiTaulukko = [-15,-14,-13,-12.5,-12,-11,-10,-9,-8,-7,-6.5,-6,-5,-4,-3,-2,-1,0,0.5,1,1.5,2,2.5,3,3.5,4,5,6,7,7.5,8,9,10];
+      var tuntiTaulukko = [-15,-14,-13,-12.5,-12,-11,-10,-9,-8,-7,-6.5,-6,-5,-4,-3,-2,-1,0,0.5,1,1.5,2,2.5,2.75,3,3.5,4,5,5.75,6,6.5,7,7.5,8,9,9.75,10,11];
       utc = tuntiTaulukko[parseFloat(event.target.value)];
       utc = parseFloat(utc);
 
