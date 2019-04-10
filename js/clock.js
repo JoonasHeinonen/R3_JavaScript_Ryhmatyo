@@ -46,8 +46,6 @@ var zone = new Vue({
     onChange(event) {
       var tuntiTaulukko = [-15,-14,-13,-12.5,-12,-11,-10,-9,-8,-7,-6.5,-6,-5,-4,-3,-2,-1,0,0.5,1,1.5,2,2.5,3,3.5,4,5,6,7,7.5,8,9,10];
       utc = tuntiTaulukko[parseFloat(event.target.value)];
-      console.log(utc);
-      console.log(utc + utc);
       utc = parseFloat(utc);
 
       return utc;
