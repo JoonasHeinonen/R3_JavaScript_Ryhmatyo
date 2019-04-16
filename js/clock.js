@@ -14,14 +14,14 @@ function paivitaAika(tunnit) {
   var tunnitMj = "" + tunnit
   var cd = new Date();
   if (tunnit){
-    if(tunnitMj.charAt(0) == "-" && (tunnitMj.charAt(tunnitMj.length - 1) == "." &&  tunnitMj.charAt(tunnitMj.length - 1) =="5")){
+    if(tunnitMj.charAt(0) == "-" && (tunnitMj.charAt(tunnitMj.length - 1) == ".")){ //Tarkistetaan, onko tuntien muutos negatiivinen sekä xx:30-vyöhykkeellä
       cd.setMinutes(cd.getMinutes() - 30);
       tunnit += 1
     }
-    else if(tunnitMj.charAt(tunnitMj.length - 2) == "."){
+    else if(tunnitMj.charAt(tunnitMj.length - 2) == "."){ //tarkistetaan, onko tuntien muutos xx:30-vyöhykkeellä
       cd.setMinutes(cd.getMinutes() + 30);
     }
-    else if(tunnitMj.charAt(tunnitMj.length - 3) == "."){
+    else if(tunnitMj.charAt(tunnitMj.length - 3) == "."){ // tarkistetaan, onko tuntien muutos xx:45-vyöhykkeellä
       cd.setMinutes(cd.getMinutes() + 45);
     }
     cd.setHours(cd.getHours() + tunnit)
