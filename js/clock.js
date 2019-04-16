@@ -11,18 +11,14 @@ var timerID = setInterval('paivitaAika(utc)', 500);
 paivitaAika();
 
 function paivitaAika(tunnit) {
-  var tunnitMj = "" + tunnit
   var cd = new Date();
   if (tunnit){
-    if(tunnitMj.charAt(0) == "-" && (tunnitMj.charAt(tunnitMj.length - 1) == ".")){ //Tarkistetaan, onko tuntien muutos negatiivinen sekä xx:30-vyöhykkeellä
+    if(tunnit == -12.5 || tunnit == -6.5){
       cd.setMinutes(cd.getMinutes() - 30);
       tunnit += 1
     }
-    else if(tunnitMj.charAt(tunnitMj.length - 2) == "."){ //tarkistetaan, onko tuntien muutos xx:30-vyöhykkeellä
+    else if(tunnit == 0.5 || tunnit == 1.5 || tunnit == 2.5 ||tunnit == 3.5 || tunnit == 7.5){
       cd.setMinutes(cd.getMinutes() + 30);
-    }
-    else if(tunnitMj.charAt(tunnitMj.length - 3) == "."){ // tarkistetaan, onko tuntien muutos xx:45-vyöhykkeellä
-      cd.setMinutes(cd.getMinutes() + 45);
     }
     cd.setHours(cd.getHours() + tunnit)
   }
@@ -48,9 +44,8 @@ var zone = new Vue({
   },
   methods: {
     onChange(event) {
-      var tuntiTaulukko = [-12, -11, -10, -9.5, -9, -8, -7, -6, -5, -4, -3.5, -3, -2, -1, 0, 
-        1, 2, 3, 3.5, 4, 4.5, 5, 5.5, 5.75, 6, 6.5, 7, 8, 8.75, 9, 9.5, 10, 10.5, 11, 12, 12.75, 13, 14];
-      utc = tuntiTaulukko[parseFloat(event.target.value)] - 3;
+      var tuntiTaulukko = [-15,-14,-13,-12.5,-12,-11,-10,-9,-8,-7,-6.5,-6,-5,-4,-3,-2,-1,0,0.5,1,1.5,2,2.5,3,3.5,4,5,6,7,7.5,8,9,10];
+      utc = tuntiTaulukko[parseFloat(event.target.value)];
       utc = parseFloat(utc);
 
       return utc;
@@ -67,18 +62,19 @@ var zone = new Vue({
  el: '#sijaintiTieto',
 
   data: {
-	  pituus:''
+	  pituus:'',
+    leveys:''
   },
    methods:{
     sijainti: function () {
 	 if(navigator.geolocation){
 	 navigator.geolocation.getCurrentPosition(this.naytaPituus);
 
-
 	 }
     },
 	naytaPituus:function (position) {
 		this.pituus = position.coords.longitude;
+    this.leveys = position.coords.latitude;
 	 }
 	}
 //if (pituus > 18) {
