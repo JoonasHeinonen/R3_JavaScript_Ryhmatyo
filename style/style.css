@@ -1,6 +1,6 @@
 #clock-area {
     background-color: white;
-    border-color: grey;
+    border-color: #d1d1d1;
     border-width: 1px;
     border-style: solid;
     border-radius: 6px;
@@ -48,8 +48,8 @@
     color: grey;
     display: flex;
     justify-content: center;
-    border-color: grey;
-    border-bottom: 1px solid grey;
+    border-color: #d1d1d1;
+    border-bottom: 1px solid #d1d1d1;
 }
 
 p, #text-area {
@@ -69,11 +69,11 @@ p, #text-area {
     list-style-type: none;
 }
 
-#selector-of-timezone {
+#selector-of-timezone, button {
     height: 100%;
-    padding: 10px 50px 10px 68px;
+    padding: 10px 10px 10px 10px;
     background: #fff;
-    border: 1px solid grey;
+    border: 1px solid #d1d1d1;
     color: grey;
     border-radius: 6px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
