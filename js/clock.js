@@ -6,9 +6,19 @@ var clock = new Vue({
   }
 });
 
+var analogClock = new Vue({
+  el: '#analog-clock',
+  data: {
+    hourDeg: '',
+    minuteDeg: '',
+    secondDeg: ''
+  }
+});
 
 var timerID = setInterval('paivitaAika(utc)', 500);
 paivitaAika();
+var analogTimerID = setInterval('paivitaAnaloginAika()', 500);
+paivitaAnaloginAika();
 
 function paivitaAika(tunnit) {
   var tunnitMj = "" + tunnit
@@ -29,22 +39,25 @@ function paivitaAika(tunnit) {
   clock.time = kelloTaulu(cd.getHours(), 2) +':'+
               kelloTaulu(cd.getMinutes(), 2) +':'+
               kelloTaulu(cd.getSeconds(), 2);
+  analogClock.hourDeg = cd.getHours() * 30;
+  analogClock.minuteDeg = cd.getMinutes() * 6;
+  analogClock.secondDeg = cd.getSeconds() * 6;
+};
+
+function paivitaAnaloginAika() {
   function analoginenKelloTaulu() {
+    var cd = new Date();
     var hourHand = document.getElementById("hour-hand");
     var minuteHand = document.getElementById("minute-hand");
     var secondHand = document.getElementById("second-hand");
 
-    var hourDeg = cd.getHours() * 30;
-    var minuteDeg = cd.getMinutes() * 6;
-    var secondDeg = cd.getSeconds() * 6;
-
-    hourHand.style.transform = 'rotate(' + hourDeg + 'deg)';
-    minuteHand.style.transform = 'rotate(' + minuteDeg + 'deg)';
-    secondHand.style.transform = 'rotate(' + secondDeg + 'deg)';
+    hourHand.style.transform = 'rotate(' + analogClock.hourDeg + 'deg)';
+    minuteHand.style.transform = 'rotate(' + analogClock.minuteDeg + 'deg)';
+    secondHand.style.transform = 'rotate(' + analogClock.secondDeg + 'deg)';
   }
 
   analoginenKelloTaulu();
-};
+}
 
 
 function kelloTaulu(numero, digi) {

@@ -1,6 +1,6 @@
 #clock-area {
     background-color: white;
-    border-color: #ededed;
+    border-color: grey;
     border-width: 1px;
     border-style: solid;
     border-radius: 6px;
@@ -48,15 +48,19 @@
     color: grey;
     display: flex;
     justify-content: center;
-    border-color: #ededed;
-    border-bottom: 1px solid #ededed;
+    border-color: grey;
+    border-bottom: 1px solid grey;
+}
+
+p, #text-area {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: grey;
+  margin: 16px;
 }
 
 #text-area {
     height: 100%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 16px;
-    color: grey;
     display: flex;
     justify-content: center;
 }
@@ -69,7 +73,7 @@
     height: 100%;
     padding: 10px 50px 10px 68px;
     background: #fff;
-    border: 1px solid #ededed;
+    border: 1px solid grey;
     color: grey;
     border-radius: 6px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
