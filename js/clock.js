@@ -130,7 +130,7 @@ el: '#aikaVyohyke',
   methods:{
     aika: function () {
       if(this.pituus = 22){
-        alert("Hello! I am an alert box!!");
+      
       }
     }
   }
