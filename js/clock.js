@@ -71,6 +71,8 @@ function kelloTaulu(numero, digi) {
 
 
 var utc = 0;
+var o = new Date();
+var offset = (o.getTimezoneOffset() / 60);
 var zone = new Vue({
   el: '#selector-of-timezone',
   data: {
@@ -80,9 +82,25 @@ var zone = new Vue({
     onChange(event) {
       var tuntiTaulukko = [-12, -11, -10, -9.5, -9, -8, -7, -6, -5, -4, -3.5, -3, -2, -1, 0,
         1, 2, 3, 3.5, 4, 4.5, 5, 5.5, 5.75, 6, 6.5, 7, 8, 8.75, 9, 9.5, 10, 10.5, 11, 12, 12.75, 13, 14];
-      utc = tuntiTaulukko[parseFloat(event.target.value)] - 3;
+      utc = tuntiTaulukko[parseFloat(event.target.value)] + offset;
       utc = parseFloat(utc);
       return utc;
+    }
+  }
+})
+
+var clocksRendered = 1;
+var clocks = new Vue({
+  el: '#numberOfClocks',
+  data: {
+    multiClock: ''
+  },
+  methods: {
+    onChange(event) {
+      clocksRendered = event.target.value
+      clocksRendered = parseInt(clocksRendered);
+      console.log(clocksRendered)
+      return clocksRendered;
     }
   }
 })
@@ -125,7 +143,7 @@ el: '#aikaVyohyke',
   methods:{
     aika: function () {
       if(this.pituus = 22){
-        alert("Hello! I am an alert box!!");
+      
       }
     }
   }
