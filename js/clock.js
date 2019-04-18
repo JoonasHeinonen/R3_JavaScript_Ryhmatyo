@@ -85,5 +85,20 @@ var zone = new Vue({
 //if (pituus > 18) {
 //  document.getElementById("demo").innerHTML = "Good day!";
 //}
+});
+
+new Vue({
+el: '#aikaVyohyke',
+
+  data: {
+    aika:''
+  },
+  methods:{
+    aika: function () {
+      if(this.pituus = 22){
+        alert("Hello! I am an alert box!!");
+      }
+    }
+  }
 
 });
