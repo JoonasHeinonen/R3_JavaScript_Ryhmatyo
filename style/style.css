@@ -6,6 +6,37 @@
     border-radius: 6px;
     width: 400px;
     margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+#analog-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#analog-clock {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  background: url("../images/clock_table.png");
+}
+
+.hands {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#analog-clock:after {
+  position: absolute;
+  background: #000;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 #clock {

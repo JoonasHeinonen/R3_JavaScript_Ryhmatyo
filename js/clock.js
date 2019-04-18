@@ -29,6 +29,21 @@ function paivitaAika(tunnit) {
   clock.time = kelloTaulu(cd.getHours(), 2) +':'+
               kelloTaulu(cd.getMinutes(), 2) +':'+
               kelloTaulu(cd.getSeconds(), 2);
+  function analoginenKelloTaulu() {
+    var hourHand = document.getElementById("hour-hand");
+    var minuteHand = document.getElementById("minute-hand");
+    var secondHand = document.getElementById("second-hand");
+
+    var hourDeg = cd.getHours() * 30;
+    var minuteDeg = cd.getMinutes() * 6;
+    var secondDeg = cd.getSeconds() * 6;
+
+    hourHand.style.transform = 'rotate(' + hourDeg + 'deg)';
+    minuteHand.style.transform = 'rotate(' + minuteDeg + 'deg)';
+    secondHand.style.transform = 'rotate(' + secondDeg + 'deg)';
+  }
+
+  analoginenKelloTaulu();
 };
 
 
@@ -39,6 +54,8 @@ function kelloTaulu(numero, digi) {
   }
   return (nolla + numero).slice(-digi);
 }
+
+
 
 var utc = 0;
 var zone = new Vue({
