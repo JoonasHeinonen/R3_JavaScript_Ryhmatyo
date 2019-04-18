@@ -48,11 +48,10 @@ var zone = new Vue({
   },
   methods: {
     onChange(event) {
-      var tuntiTaulukko = [-15,-14,-13,-12.5,-12,-11,-10,-9,-8,-7,-6.5,-6,-5,-4,-3,-2,-1,0,0.5,1,1.5,2,2.5,3,3.5,4,5,6,7,7.5,8,9,10];
-      utc = tuntiTaulukko[parseFloat(event.target.value)];
-
+      var tuntiTaulukko = [-12, -11, -10, -9.5, -9, -8, -7, -6, -5, -4, -3.5, -3, -2, -1, 0,
+        1, 2, 3, 3.5, 4, 4.5, 5, 5.5, 5.75, 6, 6.5, 7, 8, 8.75, 9, 9.5, 10, 10.5, 11, 12, 12.75, 13, 14];
+      utc = tuntiTaulukko[parseFloat(event.target.value)] - 3;
       utc = parseFloat(utc);
-
       return utc;
     }
   }
