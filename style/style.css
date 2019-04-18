@@ -1,10 +1,25 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+#wholePage {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/image99.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 #clock-area {
     background-color: white;
     border-color: #d1d1d1;
     border-width: 1px;
     border-style: solid;
-    border-radius: 6px;
-    width: 400px;
+    border-radius: 10px;
+    width: 30em;
     margin: auto;
     align-items: center;
     justify-content: center;
@@ -58,6 +73,11 @@ p, #text-area {
   margin: 16px;
 }
 
+#numberOfClocks {
+  width: 20em;
+  margin-left: calc(50% - 10em);
+}
+
 #text-area {
     height: 100%;
     font-size: 16px;
@@ -79,10 +99,6 @@ p, #text-area {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
     margin: auto;
-}
-
-body {
-  background: #fff;
 }
 
 svg{

@@ -84,6 +84,7 @@ var zone = new Vue({
         1, 2, 3, 3.5, 4, 4.5, 5, 5.5, 5.75, 6, 6.5, 7, 8, 8.75, 9, 9.5, 10, 10.5, 11, 12, 12.75, 13, 14];
       utc = tuntiTaulukko[parseFloat(event.target.value)] + offset;
       utc = parseFloat(utc);
+      this.$emit('changed', event.target.value);
       return utc;
     }
   }
@@ -143,9 +144,24 @@ el: '#aikaVyohyke',
   methods:{
     aika: function () {
       if(this.pituus = 22){
-      
+
       }
     }
   }
 
 });
+
+// new Vue({
+//   el: "#wholePage",
+//   data: {
+//     timezone: "",
+//     bgImgNumber: 99
+//     color: #323232
+//   },
+//   methods: {
+//     changeBGI (event.target.value) {
+//       bgImgNumber: this.event.target.value;
+//       return bgImgNumber;
+//     }
+//   }
+// })

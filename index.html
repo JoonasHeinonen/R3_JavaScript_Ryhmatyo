@@ -3,38 +3,33 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <link href="style/style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="style/style.css">
         <title>World Clock</title>
 
     </head>
     <body>
+      <div id="wholePage">
+      <!-- @change="changeBGI" :style="{ backgroundImage: 'url(../images/image' + bgImgNumber + '.jpg)' }" -->
         <div id="clock-area">
           <div id="analog-container">
             <div id="analog-clock">
               <img id="hour-hand" class="hands" src="images/hour_hand.png">
               <img id="minute-hand" class="hands" src="images/minute_hand.png">
               <img id="second-hand" class="hands" src="images/second_hand.png">
-            </div>
-          </div>
+            </div> <!--analog-clock-->
+          </div> <!--analog-container-->
             <div id="clock">
-
-              <p class="time">{{ time }}
-              </p>
-            </div>
+              <p class="time">{{ time }}</p>
+            </div> <!--clock-->
 
             <div id="sijaintiTieto">
-          	    <p>Pituus = {{pituus}}</p>
+                <p>Pituus = {{pituus}}</p>
                 <p>Leveys = {{leveys}}</p>
-          	   <button @click="sijainti()">Selvitä sijaintini</button>
-            </div>
+               <button @click="sijainti()">Selvitä sijaintini</button>
+            </div> <!--sijaintiTieto-->
             <div id="aikaVyohyke">
                 <p>Aikavyöhyke = {{aika}}</p>
-            </div>
-<<<<<<< HEAD
-=======
-
-
+            </div> <!--aikaVyohyke-->
 
 
             <select id="numberOfClocks" @change="onChange($event)" v-model="multiClock">
@@ -42,15 +37,14 @@
                 <option value=1>1 clock</option>
                 <option value=2>2 clocks</option>
                 <option value=3>3 clocks</option>
-            </select>
+            </select> <!--numberOfClocks-->
 
->>>>>>> cc61b014dedcb8c7d4001a432c823150aabbb89e
             <div id="text-area">
                 <ul class="list">
                     <li id="current-timezone"></li>
                     <li id="current-area"></li>
                 </ul>
-            </div>
+            </div> <!--textarea-->
             <p><label for="selector-of-timezone">
                 <select id="selector-of-timezone" @change="onChange($event)" v-model="timezone">
                     <option disabled selected value>Choose a timezone</option>
@@ -93,11 +87,10 @@
                     <option value=36>UTC+13:00</option>
                     <option value=37>UTC+14:00</option>
                 </select>
-            </label></p>
-        </div>
-
+            </label></p> <!--selector-of-timezone-->
+        </div> <!--clock-area-->
+      </div> <!--wholePage-->
         <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-        <script src="js/clock.js">
-        </script>
+        <script src="js/clock.js"></script>
     </body>
 </html>
