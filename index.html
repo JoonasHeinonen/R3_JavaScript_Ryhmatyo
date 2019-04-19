@@ -23,12 +23,15 @@
             </div> <!--clock-->
 
             <div id="sijaintiTieto">
-                <p>Pituus = {{pituus}}</p>
-                <p>Leveys = {{leveys}}</p>
-               <button @click="sijainti()">Selvitä sijaintini</button>
+                <p>Longitude = {{pituus}}</p>
+                <p>Latitude = {{leveys}}</p>
+
             </div> <!--sijaintiTieto-->
-            <div id="aikaVyohyke">
-                <p>Aikavyöhyke = {{aika}}</p>
+            <div>
+              <button onclick="geoLocation()">Check my timezone</button>
+              <p>My time zone:</p>
+              <p id="aikaVyohyke"</p>
+
             </div> <!--aikaVyohyke-->
 
 
