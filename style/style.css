@@ -20,6 +20,7 @@ html, body {
     border-style: solid;
     border-radius: 10px;
     width: 30em;
+    padding: 3em 0;
     margin: auto;
     align-items: center;
     justify-content: center;
