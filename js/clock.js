@@ -129,27 +129,44 @@ var clocks = new Vue({
 		this.pituus = position.coords.longitude;
     this.leveys = position.coords.latitude;
 	 }
-	}
+ },
+  beforeMount(){
+    this.sijainti()
+  }
 //if (pituus > 18) {
 //  document.getElementById("demo").innerHTML = "Good day!";
 //}
 });
 
-new Vue({
-el: '#aikaVyohyke',
 
-  data: {
-    aika:''
-  },
-  methods:{
-    aika: function () {
-      if(this.pituus = 22){
 
-      }
-    }
+var m = document.getElementById('aikaVyohyke');
+function geoLocation () {
+  navigator.geolocation.getCurrentPosition(showLocation);
+}
+function showLocation(position) {
+  m.innerHTML = position.coords.longitude;
+  var lon = position.coords.longitude;
+
+  if(lon > 0 && lon < 15) {
+    m.innerHTML = "UTC +01:00";
   }
+  else if(lon > 15 && lon < 30) {
+    m.innerHTML = "UTC +02:00";
+  }
+  else if(lon > 30 && lon < 45) {
+    m.innerHTML = "UTC +03:00";
+  }
+  else if(lon > 45 && lon < 60) {
+    m.innerHTML = "UTC +04:00";
+  }
+  else if(lon > 60 && lon < 75) {
+    m.innerHTML = "UTC +05:00";
+  }
+}
 
-});
+//geoLocation();
+
 
 // new Vue({
 //   el: "#wholePage",
