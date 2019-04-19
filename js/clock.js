@@ -149,19 +149,40 @@ function showLocation(position) {
   var lon = position.coords.longitude;
 
   if(lon > 0 && lon < 15) {
-    m.innerHTML = "UTC +01:00";
+    m.innerHTML = "(UTC +01:00) Oslo, Roma, Lagos";
   }
   else if(lon > 15 && lon < 30) {
-    m.innerHTML = "UTC +02:00";
+    m.innerHTML = "(UTC +02:00) Helsinki, Riga, Jerusalem";
   }
   else if(lon > 30 && lon < 45) {
-    m.innerHTML = "UTC +03:00";
+    m.innerHTML = "(UTC +03:00) Moscow, Doha, Nairobi";
   }
   else if(lon > 45 && lon < 60) {
-    m.innerHTML = "UTC +04:00";
+    m.innerHTML = "(UTC +04:00) Dubai, Tbilisi, Saint-Denis";
   }
   else if(lon > 60 && lon < 75) {
-    m.innerHTML = "UTC +05:00";
+    m.innerHTML = "(UTC +05:00) Oral, Andijon, Yekaterinburg";
+  }
+  else if(lon > 75 && lon < 90) {
+    m.innerHTML = "(UTC +06:00) Almaty, Omsk, Ürümqi";
+  }
+  else if(lon > 90 && lon < 105) {
+    m.innerHTML = "(UTC +07:00) Bangkok, Krasnoyarsk, Pontianak";
+  }
+  else if(lon > 105 && lon < 120) {
+    m.innerHTML = "(UTC +08:00) Tutong, Irkutsk, Singapore";
+  }
+  else if(lon > 120 && lon < 135) {
+    m.innerHTML = "(UTC +09:00) Ambon, Seoul, Tokyo";
+  }
+  else if(lon > 135 && lon < 150) {
+    m.innerHTML = "(UTC +10:00) Vladivostok, Brisbane, Colonia";
+  }
+  else if(lon > 150 && lon < 165) {
+    m.innerHTML = "(UTC +11:00) Arafa, Tofol, Kolonia";
+  }
+  else if(lon > 165 && lon < 180) {
+    m.innerHTML = "(UTC +12:00) Bilibino, Auckland, Tarawa";
   }
 }
 
