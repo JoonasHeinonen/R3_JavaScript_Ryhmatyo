@@ -39,7 +39,7 @@ function paivitaAika(tunnit) {
   clock.time = kelloTaulu(cd.getHours(), 2) +':'+
               kelloTaulu(cd.getMinutes(), 2) +':'+
               kelloTaulu(cd.getSeconds(), 2);
-  analogClock.hourDeg = cd.getHours() * 30;
+  analogClock.hourDeg = ((cd.getHours() % 12 ) * 30) + (0.5 * cd.getMinutes());
   analogClock.minuteDeg = cd.getMinutes() * 6;
   analogClock.secondDeg = cd.getSeconds() * 6;
 };
