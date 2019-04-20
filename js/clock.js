@@ -90,7 +90,8 @@ var zone = new Vue({
   }
 })
 
-var clocksRendered = 1;
+var previousClones = 0;
+var clonesRendered = 0;
 var clocks = new Vue({
   el: '#numberOfClocks',
   data: {
@@ -98,13 +99,38 @@ var clocks = new Vue({
   },
   methods: {
     onChange(event) {
-      clocksRendered = event.target.value
-      clocksRendered = parseInt(clocksRendered);
-      console.log(clocksRendered)
-      return clocksRendered;
+      previousClones = clonesRendered;
+      clonesRendered = event.target.value
+      clonesRendered = parseInt(clonesRendered);
+      
+     
+      function cloneDiv(){
+        console.log('Clones to be rendered:' + clonesRendered)
+        console.log('Previous clones: ' + previousClones)
+        for(var i = 0; i < clonesRendered; i++){
+          var cloning = document.getElementById('area-to-clone')
+          clone = cloning.cloneNode(true);
+          clone.id = 'clock_clone';
+          document.getElementById('cloning-area').appendChild(clone);
+          console.log('Clone ' + (i+1) + ' added')
+
+        }
+        var j = 1;
+        var previous = previousClones;
+        while(clonesRendered < previous){
+          document.getElementById("cloning-area").removeChild(clone);
+          console.log('Clone ' + (j) + ' removed');
+          previous -=1;
+          j +=1;
+        }
+      }
+      cloneDiv();
+      return previousClones;
     }
   }
 })
+
+
 
 
 //Tämän alle laitetaan geolocation - ominaisuus

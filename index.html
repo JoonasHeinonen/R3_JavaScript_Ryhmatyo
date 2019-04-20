@@ -10,7 +10,9 @@
     <body>
       <div id="wholePage">
       <!-- @change="changeBGI" :style="{ backgroundImage: 'url(../images/image' + bgImgNumber + '.jpg)' }" -->
-        <div id="clock-area">
+      
+      <div id="clock-area">
+          <div id="area-to-clone">
           <div id="analog-container">
             <div id="analog-clock">
               <img id="hour-hand" class="hands" src="images/hour_hand.png">
@@ -21,7 +23,9 @@
             <div id="clock">
               <p class="time">{{ time }}</p>
             </div> <!--clock-->
-
+          </div>  <!--area-to-clone-->
+          <div id="cloning-area">
+          </div><!--cloning-area-->
             <div id="sijaintiTieto">
                 <p>Longitude = {{pituus}}</p>
                 <p>Latitude = {{leveys}}</p>
@@ -37,9 +41,9 @@
 
             <select id="numberOfClocks" @change="onChange($event)" v-model="multiClock">
                 <option disabled selected value>Choose the number of clocks shown</option>
-                <option value=1>1 clock</option>
-                <option value=2>2 clocks</option>
-                <option value=3>3 clocks</option>
+                <option value=0>1 clock</option>
+                <option value=1>2 clocks</option>
+                <!--<option value=2>3 clocks</option>-->
             </select> <!--numberOfClocks-->
 
             <div id="text-area">
