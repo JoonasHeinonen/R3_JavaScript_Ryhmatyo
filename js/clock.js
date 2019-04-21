@@ -150,7 +150,7 @@ var clocks = new Vue({
 
 
 
-new Vue({
+sijaintiTieto = new Vue({
   el: '#sijaintiTieto',
   data: {
     pituus:'',
@@ -181,6 +181,7 @@ new Vue({
 var m = document.getElementById('aikaVyohyke');
 function geoLocation () {
   navigator.geolocation.getCurrentPosition(showLocation);
+  sijaintiTieto.sijainti();
 }
 function showLocation(position) {
   m.innerHTML = position.coords.longitude;
