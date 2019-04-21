@@ -97,7 +97,7 @@ var zone = new Vue({
       utc = tuntiTaulukko[parseFloat(event.target.value)] + offset;
       utc = parseFloat(utc);
       this.$emit('changed', event.target.value);
-      initializeBackground(utc);
+      initializeBackground(event.target.value);
       return utc;
     }
   }
