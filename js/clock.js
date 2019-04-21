@@ -1,3 +1,15 @@
+// Initialize global variables for general changes, e.g. background image
+var bgImgNumber;
+
+var bgImg = document.getElementById("wholePage");
+
+var initializeBackground = function(number) {
+  this.bgImgNumber = number;
+  bgImg.style.background = "url('./images/image" + bgImgNumber + ".jpg')";
+  bgImg.style.backgroundSize = "100% 100%";
+}
+
+initializeBackground(99);
 
 var clock = new Vue({
   el: '#clock',
@@ -85,6 +97,7 @@ var zone = new Vue({
       utc = tuntiTaulukko[parseFloat(event.target.value)] + offset;
       utc = parseFloat(utc);
       this.$emit('changed', event.target.value);
+      initializeBackground(utc);
       return utc;
     }
   }
@@ -211,21 +224,3 @@ function showLocation(position) {
     m.innerHTML = "(UTC +12:00) Bilibino, Auckland, Tarawa";
   }
 }
-
-//geoLocation();
-
-
-// new Vue({
-//   el: "#wholePage",
-//   data: {
-//     timezone: "",
-//     bgImgNumber: 99
-//     color: #323232
-//   },
-//   methods: {
-//     changeBGI (event.target.value) {
-//       bgImgNumber: this.event.target.value;
-//       return bgImgNumber;
-//     }
-//   }
-// })
