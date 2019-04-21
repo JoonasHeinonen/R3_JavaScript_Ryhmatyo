@@ -150,27 +150,26 @@ var clocks = new Vue({
 
 
 
- new Vue({
- el: '#sijaintiTieto',
-
+new Vue({
+  el: '#sijaintiTieto',
   data: {
-	  pituus:'',
+    pituus:'',
     leveys:''
   },
-   methods:{
+  methods:{
     sijainti: function () {
-	 if(navigator.geolocation){
-	 navigator.geolocation.getCurrentPosition(this.naytaPituus);
-
-	 }
+      if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(this.naytaPituus);
+      }
     },
-	naytaPituus:function (position) {
-		this.pituus = position.coords.longitude;
-    this.leveys = position.coords.latitude;
-	 }
- },
+    naytaPituus:function (position) {
+      this.pituus = position.coords.longitude;
+      this.leveys = position.coords.latitude;
+    }
+  },
   beforeMount(){
-    this.sijainti()
+    this.sijainti();
+    geoLocation();
   }
 //if (pituus > 18) {
 //  document.getElementById("demo").innerHTML = "Good day!";

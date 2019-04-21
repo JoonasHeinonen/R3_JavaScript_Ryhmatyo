@@ -44,6 +44,20 @@ html, body {
   left: 0;
 }
 
+p, #text-are, th, #clock {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: grey;
+}
+
+p, #text-area {
+  margin: 16px;
+}
+
+th, #clock {
+  text-align: justify;
+  padding: 16px;
+}
+
 #analog-clock:after {
   position: absolute;
   background: #000;
@@ -56,21 +70,12 @@ html, body {
 
 #clock {
     height: 10%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 46px;
     font-weight: bold;
-    padding: 16px;
-    color: grey;
     display: flex;
     justify-content: center;
     border-color: #d1d1d1;
     border-bottom: 1px solid #d1d1d1;
-}
-
-p, #text-area {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: grey;
-  margin: 16px;
 }
 
 #numberOfClocks {
