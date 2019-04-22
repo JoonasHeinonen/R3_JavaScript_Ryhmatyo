@@ -1,29 +1,84 @@
 html, body {
-  height: 100%;
-  width: 100%;
   margin: 0;
 }
 
 #wholePage {
   width: 100%;
   height: 100%;
-  background-image: url("../images/image99.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 #clock-area {
-    background-color: white;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
     border-color: #d1d1d1;
     border-width: 1px;
     border-style: solid;
     border-radius: 10px;
     width: 30em;
-    padding: 3em 0;
+    padding: 1em 0;
     margin: auto;
     align-items: center;
+    float: left;
     justify-content: center;
+
+}
+
+#clock-area2 {
+
+    border-color: #d1d1d1;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    width: 30em;
+    padding: 1em 0;
+    margin: auto;
+    align-items: center;
+    float: none;
+    justify-content: center;
+    opacity: 0.9;
+    visibility: hidden;
+
+}
+
+#clock-area3 {
+
+    border-color: #d1d1d1;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    width: 30em;
+    padding: 1em 0;
+    margin: auto;
+    align-items: center;
+    float: right;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    opacity: 0.9;
+    visibility: hidden;
+=======
+=======
+>>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
+  background-color: white;
+  border-color: #d1d1d1;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  width: 30em;
+  padding: 3em 0;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+<<<<<<< HEAD
+>>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
+=======
+>>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
 }
 
 #analog-container {
@@ -39,10 +94,61 @@ html, body {
   background: url("../images/clock_table.png");
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+#analog-clock2 {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  background: url("../images/clock_table.png");
+}
+
+#analog-clock3 {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  background: url("../images/clock_table.png");
+=======
+=======
+>>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
+#clock-area {
+  margin-top: 1em;
+}
+
+#cloning-area {
+  margin-top: 3em;
+<<<<<<< HEAD
+>>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
+=======
+>>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
+}
+
 .hands {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+p, #text-area, th, #clock {
+=======
+p, #text-are, th, #clock, tr {
+>>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
+=======
+p, #text-are, th, #clock, tr {
+>>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: grey;
+}
+
+p, #text-area {
+  margin: 16px;
+}
+
+th, #clock {
+  text-align: justify;
+  padding: 16px;
 }
 
 #analog-clock:after {
@@ -55,31 +161,79 @@ html, body {
   transform: translateX(-50%) translateY(-50%);
 }
 
+#bottom-area {
+  background-color: white;
+  padding-bottom: 20px;
+  opacity: 0.9;
+}
+
+#bottomFirst {
+  background-color: white;
+  opacity: 0.9;
+  padding-bottom: 10px;
+}
+
 #clock {
+    background-color: white;
     height: 10%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 46px;
     font-weight: bold;
-    padding: 16px;
-    color: grey;
     display: flex;
     justify-content: center;
     border-color: #d1d1d1;
     border-bottom: 1px solid #d1d1d1;
+    margin-top: 20px;
+    opacity: 0.9;
 }
 
-p, #text-area {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: grey;
-  margin: 16px;
+<<<<<<< HEAD
+#clock2 {
+    background-color: white;
+    height: 10%;
+    font-size: 46px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    border-color: #d1d1d1;
+    border-bottom: 1px solid #d1d1d1;
+    margin-top: 20px;
+    opacity: 0.9;
 }
 
+#clock3 {
+    background-color: white;
+    height: 10%;
+    font-size: 46px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    border-color: #d1d1d1;
+    border-bottom: 1px solid #d1d1d1;
+    margin-top: 20px;
+    opacity: 0.9;
+}
+
+#sijaintiTieto {
+  background-color: white;
+  opacity: 0.9;
+  font-size: 16px;
+}
+
+#buttonLocation {
+  background-color: white;
+  padding-bottom: 5px;
+  opacity: 0.9;
+}
+
+=======
+>>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
 #numberOfClocks {
   width: 20em;
   margin-left: calc(50% - 10em);
 }
 
 #text-area {
+    background-color: white;
     height: 100%;
     font-size: 16px;
     display: flex;
@@ -91,6 +245,30 @@ p, #text-area {
 }
 
 #selector-of-timezone, button {
+    height: 100%;
+    padding: 10px 10px 10px 10px;
+    background: #fff;
+    border: 1px solid #d1d1d1;
+    color: grey;
+    border-radius: 6px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    margin: auto;
+}
+
+#selector-of-timezone2, button {
+    height: 100%;
+    padding: 10px 10px 10px 10px;
+    background: #fff;
+    border: 1px solid #d1d1d1;
+    color: grey;
+    border-radius: 6px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    margin: auto;
+}
+
+#selector-of-timezone3, button {
     height: 100%;
     padding: 10px 10px 10px 10px;
     background: #fff;
@@ -128,6 +306,39 @@ svg{
 	stroke-linecap:round;
 }
 
+
+.second-hand_2{
+	stroke-width:3;
+
+}
+
+.minute-hand_2{
+	stroke-width:8;
+	stroke-linecap:round;
+}
+
+.hour-hand_2{
+	stroke-width:12;
+	stroke-linecap:round;
+}
+
+
+.second-hand_3{
+	stroke-width:3;
+
+}
+
+.minute-hand_3{
+	stroke-width:8;
+	stroke-linecap:round;
+}
+
+.hour-hand_3{
+	stroke-width:12;
+	stroke-linecap:round;
+}
+
+
 .hands-cover{
 	stroke-width:3;
 	fill:#fff;
@@ -139,7 +350,7 @@ svg{
 }
 
 .hour-tick{
-	stroke-width:8; //same as the miute hand
+	stroke-width:8; /* same as the minute hand */
 }
 
 .second-label{
