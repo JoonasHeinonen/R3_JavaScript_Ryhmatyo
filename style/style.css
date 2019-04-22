@@ -1,4 +1,6 @@
 html, body {
+  height: 100%;
+  width: 100%;
   margin: 0;
 }
 
@@ -59,19 +61,6 @@ html, body {
     right: 0px;
     opacity: 0.9;
     visibility: hidden;
-
-  background-color: white;
-  border-color: #d1d1d1;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 10px;
-  width: 30em;
-  padding: 3em 0;
-  margin: auto;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1em;
-
 }
 
 #analog-container {
@@ -87,7 +76,6 @@ html, body {
   background: url("../images/clock_table.png");
 }
 
-
 #analog-clock2 {
   position: relative;
   width: 280px;
@@ -100,14 +88,6 @@ html, body {
   width: 280px;
   height: 280px;
   background: url("../images/clock_table.png");
-
-#clock-area {
-  margin-top: 1em;
-}
-
-#cloning-area {
-  margin-top: 3em;
-
 }
 
 .hands {
@@ -116,13 +96,7 @@ html, body {
   left: 0;
 }
 
-
 p, #text-area, th, #clock {
-
-p, #text-are, th, #clock, tr {
-
-
-p, #text-are, th, #clock, tr {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: grey;
 }
@@ -171,7 +145,6 @@ th, #clock {
     opacity: 0.9;
 }
 
-
 #clock2 {
     background-color: white;
     height: 10%;
@@ -209,7 +182,6 @@ th, #clock {
   padding-bottom: 5px;
   opacity: 0.9;
 }
-
 
 #numberOfClocks {
   width: 20em;

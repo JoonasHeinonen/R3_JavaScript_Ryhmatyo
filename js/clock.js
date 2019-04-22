@@ -1,16 +1,12 @@
 // Initialize global variables for general changes, e.g. background image
 var bgImgNumber;
-var timerID;
-var analogTimerID;
-var bgImg = document.body;
+
+var bgImg = document.getElementById("wholePage");
 
 var initializeBackground = function(number) {
   this.bgImgNumber = number;
   bgImg.style.background = "url('./images/image" + bgImgNumber + ".jpg')";
-  bgImg.style.backgroundSize = "cover";
   bgImg.style.backgroundSize = "100% 100%";
-  bgImg.style.backgroundRepeat = "no-repeat";
-  bgImg.style.backgroundAttachment = "fixed";
 }
 
 initializeBackground(99);
@@ -32,14 +28,10 @@ var analogClock = new Vue({
   }
 });
 
-function pidaAikaTasalla() {
-  timerID = setInterval('paivitaAika(utc)', 500);
-  analogTimerID = setInterval('paivitaAnaloginAika()', 500);
-  paivitaAika();
-  paivitaAnaloginAika();
-}
-
-pidaAikaTasalla();
+var timerID = setInterval('paivitaAika(utc)', 500);
+paivitaAika();
+var analogTimerID = setInterval('paivitaAnaloginAika()', 500);
+paivitaAnaloginAika();
 
 function paivitaAika(tunnit) {
   var tunnitMj = "" + tunnit
@@ -101,8 +93,8 @@ var zone = new Vue({
   },
   methods: {
     onChange(event) {
-      var tuntiTaulukko = [-11, -10, -9, -8.5, -8, -7, -6, -5, -4, -3, -2.5, -2, -1, 0, 1,
-        2, 3, 4, 4.5, 5, 5.5, 6, 6.5, 6.75, 7, 7.5, 8, 9, 9.75, 10, 10.5, 11, 11.5, 12, 13, 13.75, 14, 15];
+      var tuntiTaulukko = [-12, -11, -10, -9.5, -9, -8, -7, -6, -5, -4, -3.5, -3, -2, -1, 0,
+        1, 2, 3, 3.5, 4, 4.5, 5, 5.5, 5.75, 6, 6.5, 7, 8, 8.75, 9, 9.5, 10, 10.5, 11, 12, 12.75, 13, 14];
       utc = tuntiTaulukko[parseFloat(event.target.value)] + offset;
       utc = parseFloat(utc);
       this.$emit('changed', event.target.value);
@@ -404,11 +396,12 @@ var clocks = new Vue({
 */
 
 
+
 //Tämän alle laitetaan geolocation - ominaisuus
 
 
 
-sijaintiTieto = new Vue({
+new Vue({
   el: '#sijaintiTieto',
   data: {
     pituus:'',
@@ -429,17 +422,13 @@ sijaintiTieto = new Vue({
     this.sijainti();
   }
 
-    geoLocation();
-  }
-//if (pituus > 18) {
-//  document.getElementById("demo").innerHTML = "Good day!";
-//}
 });
+
+
 
 var m = document.getElementById('aikaVyohyke');
 function geoLocation () {
   navigator.geolocation.getCurrentPosition(showLocation);
-  sijaintiTieto.sijainti();
 }
 function showLocation(position) {
   m.innerHTML = position.coords.longitude;
@@ -481,7 +470,4 @@ function showLocation(position) {
   else if(lon > 165 && lon < 180) {
     m.innerHTML = "(UTC +12:00) Bilibino, Auckland, Tarawa";
   }
-
-}
-
 }
