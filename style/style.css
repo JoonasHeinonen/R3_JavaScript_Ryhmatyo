@@ -1,6 +1,4 @@
 html, body {
-  height: 100%;
-  width: 100%;
   margin: 0;
 }
 
@@ -13,16 +11,17 @@ html, body {
 }
 
 #clock-area {
-    background-color: white;
-    border-color: #d1d1d1;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 10px;
-    width: 30em;
-    padding: 3em 0;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
+  background-color: white;
+  border-color: #d1d1d1;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  width: 30em;
+  padding: 3em 0;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
 }
 
 #analog-container {
@@ -38,13 +37,21 @@ html, body {
   background: url("../images/clock_table.png");
 }
 
+#clock-area {
+  margin-top: 1em;
+}
+
+#cloning-area {
+  margin-top: 3em;
+}
+
 .hands {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-p, #text-are, th, #clock {
+p, #text-are, th, #clock, tr {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: grey;
 }
