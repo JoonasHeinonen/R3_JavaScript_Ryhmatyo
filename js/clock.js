@@ -399,9 +399,13 @@ var clocks = new Vue({
 
 //Tämän alle laitetaan geolocation - ominaisuus
 
+var m = document.getElementById('aikaVyohyke');
+function geoLocation () {
+  navigator.geolocation.getCurrentPosition(showLocation);
+  sijaintiTieto.sijainti();
+}
 
-
-new Vue({
+var sijaintiTieto = new Vue({
   el: '#sijaintiTieto',
   data: {
     pituus:'',
@@ -413,23 +417,19 @@ new Vue({
         navigator.geolocation.getCurrentPosition(this.naytaPituus);
       }
     },
-    naytaPituus:function (position) {
+    naytaPituus: function (position) {
       this.pituus = position.coords.longitude;
       this.leveys = position.coords.latitude;
     }
   },
   beforeMount(){
     this.sijainti();
+    geoLocation();
   }
 
 });
 
 
-
-var m = document.getElementById('aikaVyohyke');
-function geoLocation () {
-  navigator.geolocation.getCurrentPosition(showLocation);
-}
 function showLocation(position) {
   m.innerHTML = position.coords.longitude;
   var lon = position.coords.longitude;
