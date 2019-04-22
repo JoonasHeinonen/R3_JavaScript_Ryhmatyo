@@ -13,6 +13,7 @@ html, body {
 #clock-area {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     border-color: #d1d1d1;
     border-width: 1px;
@@ -64,6 +65,8 @@ html, body {
 =======
 =======
 >>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
+=======
+>>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
   background-color: white;
   border-color: #d1d1d1;
   border-width: 1px;
@@ -76,6 +79,9 @@ html, body {
   justify-content: center;
   margin-bottom: 1em;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
+=======
 >>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
 =======
 >>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
@@ -96,6 +102,7 @@ html, body {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #analog-clock2 {
   position: relative;
   width: 280px;
@@ -111,6 +118,8 @@ html, body {
 =======
 =======
 >>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
+=======
+>>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
 #clock-area {
   margin-top: 1em;
 }
@@ -118,6 +127,9 @@ html, body {
 #cloning-area {
   margin-top: 3em;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
+=======
 >>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
 =======
 >>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
@@ -131,7 +143,11 @@ html, body {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 p, #text-area, th, #clock {
+=======
+p, #text-are, th, #clock, tr {
+>>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
 =======
 p, #text-are, th, #clock, tr {
 >>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
@@ -187,6 +203,7 @@ th, #clock {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #clock2 {
     background-color: white;
     height: 10%;
@@ -225,6 +242,8 @@ th, #clock {
   opacity: 0.9;
 }
 
+=======
+>>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
 =======
 >>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
 #numberOfClocks {
