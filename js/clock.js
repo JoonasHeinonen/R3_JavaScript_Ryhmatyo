@@ -401,19 +401,9 @@ var clocks = new Vue({
     }
   }
 })
-<<<<<<< HEAD
 */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
-
-=======
->>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
-=======
->>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
 //Tämän alle laitetaan geolocation - ominaisuus
 
 
@@ -437,19 +427,13 @@ sijaintiTieto = new Vue({
   },
   beforeMount(){
     this.sijainti();
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 
-=======
-=======
->>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
     geoLocation();
   }
 //if (pituus > 18) {
 //  document.getElementById("demo").innerHTML = "Good day!";
 //}
->>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
 });
 
 var m = document.getElementById('aikaVyohyke');
@@ -497,12 +481,7 @@ function showLocation(position) {
   else if(lon > 165 && lon < 180) {
     m.innerHTML = "(UTC +12:00) Bilibino, Auckland, Tarawa";
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 }
-=======
+
 }
->>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
-=======
-}
->>>>>>> bd6b85e822de5144ec3cb07d648c0a42f2a48e47
