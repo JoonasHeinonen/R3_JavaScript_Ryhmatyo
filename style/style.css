@@ -10,7 +10,7 @@ html, body {
 }
 
 #mainDiv {
-  padding: 5em 2em;
+  padding: 1em 2em;
   display: flex;
   justify-content: center;
 }
@@ -24,6 +24,8 @@ html, body {
     width: 30em;
     padding: 1em 0;
     margin: auto;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
     align-items: center;
     /*float: left;*/
     justify-content: center;
@@ -40,6 +42,8 @@ html, body {
     padding: 1em 0;
     margin: auto;
     margin-top: 0;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
     align-items: center;
     /*float: none;*/
     justify-content: center;
@@ -58,6 +62,8 @@ html, body {
     padding: 1em 0;
     margin: auto;
     margin-top: 0;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
     align-items: center;
     /*float: right;*/
     justify-content: center;
