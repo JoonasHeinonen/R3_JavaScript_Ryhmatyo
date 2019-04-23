@@ -346,7 +346,7 @@ function newClocks() {
 var m = document.getElementById('aikaVyohyke');
 function geoLocation () {
   navigator.geolocation.getCurrentPosition(showLocation);
-  sijaintiTieto.sijainti();
+
 }
 
 var sijaintiTieto = new Vue({
