@@ -5,7 +5,23 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" type="text/css" href="style/style.css">
       <title>World Clock</title>
+      <style>
 
+
+      @media only screen and (max-width: 850px) {
+        #mainDiv {
+
+          display: inline;
+        }
+      }
+
+      @media only screen and (max-width: 850px) {
+        #clock-area, #clock-area2, #clock-area3 {
+        width: auto;
+        }
+      }
+
+      </style>
   </head>
   <body>
     <div id="wholePage">
@@ -21,7 +37,7 @@
                 <img id="second-hand" class="hands" src="images/second_hand.png">
               </div> <!--analog-clock-->
             </div> <!--analog-container-->
-            
+
             <div id="clock">
               <p class="time">{{ time }}</p>
             </div> <!--clock-->
