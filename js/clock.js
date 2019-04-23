@@ -341,65 +341,6 @@ function newClocks() {
 
 }
 
-/*
-new Vue ({
-  el: '#numberOfClocks',
-  methods:{
-
-    newClocks: function () {
-      if(numberOfClocks.this.value == 0) {
-        document.getElementById("#clock-area2").style.opacity = 1;
-      }
-    }
-  },
-
-})
-*/
-
-/*  //Kellon monistus javascriptillä, ei toimi kunnolla.
-var previousClones = 0;
-var clonesRendered = 0;
-var clocks = new Vue({
-  el: '#numberOfClocks',
-  data: {
-    multiClock: ''
-  },
-  methods: {
-    onChange(event) {
-      previousClones = clonesRendered;
-      clonesRendered = event.target.value
-      clonesRendered = parseInt(clonesRendered);
-
-
-      function cloneDiv(){
-        console.log('Clones to be rendered:' + clonesRendered)
-        console.log('Previous clones: ' + previousClones)
-        for(var i = 0; i < clonesRendered; i++){
-          var cloning = document.getElementById('area-to-clone')
-          clone = cloning.cloneNode(true);
-          clone.id = 'clock_clone';
-          document.getElementById('cloning-area').appendChild(clone);
-          console.log('Clone ' + (i+1) + ' added')
-
-        }
-        var j = 1;
-        var previous = previousClones;
-        while(clonesRendered < previous){
-          document.getElementById("cloning-area").removeChild(clone);
-          console.log('Clone ' + (j) + ' removed');
-          previous -=1;
-          j +=1;
-        }
-      }
-      cloneDiv();
-      return previousClones;
-    }
-  }
-})
-*/
-
-
-
 //Tämän alle laitetaan geolocation - ominaisuus
 
 var m = document.getElementById('aikaVyohyke');
