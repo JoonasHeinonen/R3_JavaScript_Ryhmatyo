@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="style/style.css">
-        <title>World Clock</title>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="style/style.css">
+      <title>World Clock</title>
 
-    </head>
-    <body>
-      <div id="wholePage">
-      <!-- @change="changeBGI" :style="{ backgroundImage: 'url(../images/image' + bgImgNumber + '.jpg)' }" -->
+  </head>
+  <body>
+    <div id="wholePage">
+      <div id="mainDiv">
+        <!-- @change="changeBGI" :style="{ backgroundImage: 'url(../images/image' + bgImgNumber + '.jpg)' }" -->
 
-      <div id="clock-area">
+        <div id="clock-area">
           <div id="area-to-clone">
-          <div id="analog-container">
-            <div id="analog-clock">
-              <img id="hour-hand" class="hands" src="images/hour_hand.png">
-              <img id="minute-hand" class="hands" src="images/minute_hand.png">
-              <img id="second-hand" class="hands" src="images/second_hand.png">
-            </div> <!--analog-clock-->
-          </div> <!--analog-container-->
+            <div id="analog-container">
+              <div id="analog-clock">
+                <img id="hour-hand" class="hands" src="images/hour_hand.png">
+                <img id="minute-hand" class="hands" src="images/minute_hand.png">
+                <img id="second-hand" class="hands" src="images/second_hand.png">
+              </div> <!--analog-clock-->
+            </div> <!--analog-container-->
+            
             <div id="clock">
               <p class="time">{{ time }}</p>
             </div> <!--clock-->
@@ -33,204 +35,193 @@
                 </tr>
               </table>
             </div> <!--sijaintiTieto-->
+
             <div id="buttonLocation">
               <button onclick="geoLocation()">Check my coordinates</button>
               <p>My time zone:</p>
-              <p id="aikaVyohyke"</p>
+              <p id="aikaVyohyke"></p>
             </div> <!--aikaVyohyke-->
 
             <div id="bottomFirst">
-            <select id="numberOfClocks" onchange="newClocks()">
-                <option disabled selected value>Choose the number of clocks shown</option>
-                <option value=1>1 clock</option>
-                <option value=2>2 clocks</option>
-                <option value=3>3 clocks</option>
+              <select id="numberOfClocks" onchange="newClocks()">
+                  <option disabled selected value>Choose the number of clocks shown</option>
+                  <option value=1>1 clock</option>
+                  <option value=2>2 clocks</option>
+                  <option value=3>3 clocks</option>
 
-                <!--<option value=2>3 clocks</option>-->
-            </select> <!--numberOfClocks-->
+                  <!--<option value=2>3 clocks</option>-->
+              </select> <!--numberOfClocks-->
 
-
-
-            <p><label for="selector-of-timezone">
+              <p><label for="selector-of-timezone">
                 <select id="selector-of-timezone" @change="onChange($event)" v-model="timezone">
-                    <option disabled selected value>Choose a timezone</option>
-                    <option value=0>UTC-12:00</option>
-                    <option value=1>UTC-11:00</option>
-                    <option value=2>UTC-10:00</option>
-                    <option value=3>UTC-09:30</option>
-                    <option value=4>UTC-09:00</option>
-                    <option value=5>UTC-08:00</option>
-                    <option value=6>UTC-07:00</option>
-                    <option value=7>UTC-06:00</option>
-                    <option value=8>UTC-05:00</option>
-                    <option value=9>UTC-04:00</option>
-                    <option value=10>UTC-03:30</option>
-                    <option value=11>UTC-03:00</option>
-                    <option value=12>UTC-02:00</option>
-                    <option value=13>UTC-01:00</option>
-                    <option value=14>UTC±00:00</option>
-                    <option value=15>UTC+01:00</option>
-                    <option value=16>UTC+02:00</option>
-                    <option value=17>UTC+03:00</option>
-                    <option value=18>UTC+03:30</option>
-                    <option value=19>UTC+04:00</option>
-                    <option value=20>UTC+04:30</option>
-                    <option value=21>UTC+05:00</option>
-                    <option value=22>UTC+05:30</option>
-                    <option value=23>UTC+05:45</option>
-                    <option value=24>UTC+06:00</option>
-                    <option value=25>UTC+06:30</option>
-                    <option value=26>UTC+07:00</option>
-                    <option value=27>UTC+08:00</option>
-                    <option value=28>UTC+08:45</option>
-                    <option value=29>UTC+09:00</option>
-                    <option value=30>UTC+09:30</option>
-                    <option value=31>UTC+10:00</option>
-                    <option value=32>UTC+10:30</option>
-                    <option value=33>UTC+11:00</option>
-                    <option value=34>UTC+12:00</option>
-                    <option value=35>UTC+12:45</option>
-                    <option value=36>UTC+13:00</option>
-                    <option value=37>UTC+14:00</option>
+                  <option disabled selected value>Choose a timezone</option>
+                  <option value=0>UTC-12:00</option>
+                  <option value=1>UTC-11:00</option>
+                  <option value=2>UTC-10:00</option>
+                  <option value=3>UTC-09:30</option>
+                  <option value=4>UTC-09:00</option>
+                  <option value=5>UTC-08:00</option>
+                  <option value=6>UTC-07:00</option>
+                  <option value=7>UTC-06:00</option>
+                  <option value=8>UTC-05:00</option>
+                  <option value=9>UTC-04:00</option>
+                  <option value=10>UTC-03:30</option>
+                  <option value=11>UTC-03:00</option>
+                  <option value=12>UTC-02:00</option>
+                  <option value=13>UTC-01:00</option>
+                  <option value=14>UTC±00:00</option>
+                  <option value=15>UTC+01:00</option>
+                  <option value=16>UTC+02:00</option>
+                  <option value=17>UTC+03:00</option>
+                  <option value=18>UTC+03:30</option>
+                  <option value=19>UTC+04:00</option>
+                  <option value=20>UTC+04:30</option>
+                  <option value=21>UTC+05:00</option>
+                  <option value=22>UTC+05:30</option>
+                  <option value=23>UTC+05:45</option>
+                  <option value=24>UTC+06:00</option>
+                  <option value=25>UTC+06:30</option>
+                  <option value=26>UTC+07:00</option>
+                  <option value=27>UTC+08:00</option>
+                  <option value=28>UTC+08:45</option>
+                  <option value=29>UTC+09:00</option>
+                  <option value=30>UTC+09:30</option>
+                  <option value=31>UTC+10:00</option>
+                  <option value=32>UTC+10:30</option>
+                  <option value=33>UTC+11:00</option>
+                  <option value=34>UTC+12:00</option>
+                  <option value=35>UTC+12:45</option>
+                  <option value=36>UTC+13:00</option>
+                  <option value=37>UTC+14:00</option>
                 </select>
             </label></p> <!--selector-of-timezone-->
           </div> <!--bottomFirst-->
         </div> <!--clock-area-->
 
-        <!-- TOINEN KELLO -->
+          <!-- TOINEN KELLO -->
 
         <div id="clock-area2">
+        <div id="analog-container">
+          <div id="analog-clock2">
+            <img id="hour-hand_2" class="hands" src="images/hour_hand_2.png">
+            <img id="minute-hand_2" class="hands" src="images/minute_hand_2.png">
+            <img id="second-hand_2" class="hands" src="images/second_hand_2.png">
+          </div> <!--analog-clock-->
+        </div> <!--analog-container-->
+        <div id="bottom-area">
+          <div id="clock2">
+            <p class="time">{{ time2 }}</p>
+          </div> <!--clock-->
 
+          <p><label for="selector-of-timezone2">
+            <select id="selector-of-timezone2" @change="onChange($event)" v-model="timezone2">
+              <option disabled selected value>Choose a timezone</option>
+              <option value=0>UTC-12:00</option>
+              <option value=1>UTC-11:00</option>
+              <option value=2>UTC-10:00</option>
+              <option value=3>UTC-09:30</option>
+              <option value=4>UTC-09:00</option>
+              <option value=5>UTC-08:00</option>
+              <option value=6>UTC-07:00</option>
+              <option value=7>UTC-06:00</option>
+              <option value=8>UTC-05:00</option>
+              <option value=9>UTC-04:00</option>
+              <option value=10>UTC-03:30</option>
+              <option value=11>UTC-03:00</option>
+              <option value=12>UTC-02:00</option>
+              <option value=13>UTC-01:00</option>
+              <option value=14>UTC±00:00</option>
+              <option value=15>UTC+01:00</option>
+              <option value=16>UTC+02:00</option>
+              <option value=17>UTC+03:00</option>
+              <option value=18>UTC+03:30</option>
+              <option value=19>UTC+04:00</option>
+              <option value=20>UTC+04:30</option>
+              <option value=21>UTC+05:00</option>
+              <option value=22>UTC+05:30</option>
+              <option value=23>UTC+05:45</option>
+              <option value=24>UTC+06:00</option>
+              <option value=25>UTC+06:30</option>
+              <option value=26>UTC+07:00</option>
+              <option value=27>UTC+08:00</option>
+              <option value=28>UTC+08:45</option>
+              <option value=29>UTC+09:00</option>
+              <option value=30>UTC+09:30</option>
+              <option value=31>UTC+10:00</option>
+              <option value=32>UTC+10:30</option>
+              <option value=33>UTC+11:00</option>
+              <option value=34>UTC+12:00</option>
+              <option value=35>UTC+12:45</option>
+              <option value=36>UTC+13:00</option>
+              <option value=37>UTC+14:00</option>
+            </select>
+          </label></p> <!--selector-of-timezone-->
+        </div> <!--bottom area-->
+      </div> <!--clock-area-->
 
-                        <div id="analog-container">
-                          <div id="analog-clock2">
-                            <img id="hour-hand_2" class="hands" src="images/hour_hand_2.png">
-                            <img id="minute-hand_2" class="hands" src="images/minute_hand_2.png">
-                            <img id="second-hand_2" class="hands" src="images/second_hand_2.png">
-                          </div> <!--analog-clock-->
-                        </div> <!--analog-container-->
-                        <div id="bottom-area">
-                          <div id="clock2">
-                            <p class="time">{{ time2 }}</p>
-                          </div> <!--clock-->
+            <!-- KOLMAS KELLO -->
 
+      <div id="clock-area3">
+        <div id="analog-container">
+          <div id="analog-clock3">
+            <img id="hour-hand_3" class="hands" src="images/hour_hand_3.png">
+            <img id="minute-hand_3" class="hands" src="images/minute_hand_3.png">
+            <img id="second-hand_3" class="hands" src="images/second_hand_3.png">
+          </div> <!--analog-clock-->
+        </div> <!--analog-container-->
+        <div id="bottom-area">
+          <div id="clock3">
+            <p class="time3">{{ time3 }}</p>
+          </div> <!--clock-->
 
-
-                          <p><label for="selector-of-timezone2">
-                              <select id="selector-of-timezone2" @change="onChange($event)" v-model="timezone2">
-                                  <option disabled selected value>Choose a timezone</option>
-                                  <option value=0>UTC-12:00</option>
-                                  <option value=1>UTC-11:00</option>
-                                  <option value=2>UTC-10:00</option>
-                                  <option value=3>UTC-09:30</option>
-                                  <option value=4>UTC-09:00</option>
-                                  <option value=5>UTC-08:00</option>
-                                  <option value=6>UTC-07:00</option>
-                                  <option value=7>UTC-06:00</option>
-                                  <option value=8>UTC-05:00</option>
-                                  <option value=9>UTC-04:00</option>
-                                  <option value=10>UTC-03:30</option>
-                                  <option value=11>UTC-03:00</option>
-                                  <option value=12>UTC-02:00</option>
-                                  <option value=13>UTC-01:00</option>
-                                  <option value=14>UTC±00:00</option>
-                                  <option value=15>UTC+01:00</option>
-                                  <option value=16>UTC+02:00</option>
-                                  <option value=17>UTC+03:00</option>
-                                  <option value=18>UTC+03:30</option>
-                                  <option value=19>UTC+04:00</option>
-                                  <option value=20>UTC+04:30</option>
-                                  <option value=21>UTC+05:00</option>
-                                  <option value=22>UTC+05:30</option>
-                                  <option value=23>UTC+05:45</option>
-                                  <option value=24>UTC+06:00</option>
-                                  <option value=25>UTC+06:30</option>
-                                  <option value=26>UTC+07:00</option>
-                                  <option value=27>UTC+08:00</option>
-                                  <option value=28>UTC+08:45</option>
-                                  <option value=29>UTC+09:00</option>
-                                  <option value=30>UTC+09:30</option>
-                                  <option value=31>UTC+10:00</option>
-                                  <option value=32>UTC+10:30</option>
-                                  <option value=33>UTC+11:00</option>
-                                  <option value=34>UTC+12:00</option>
-                                  <option value=35>UTC+12:45</option>
-                                  <option value=36>UTC+13:00</option>
-                                  <option value=37>UTC+14:00</option>
-                              </select>
-                          </label></p> <!--selector-of-timezone-->
-                        </div> <!--bottom area-->
-                      </div> <!--clock-area-->
-
-          <!-- KOLMAS KELLO -->
-
-          <div id="clock-area3">
-
-
-              <div id="analog-container">
-                <div id="analog-clock3">
-                  <img id="hour-hand_3" class="hands" src="images/hour_hand_3.png">
-                  <img id="minute-hand_3" class="hands" src="images/minute_hand_3.png">
-                  <img id="second-hand_3" class="hands" src="images/second_hand_3.png">
-                </div> <!--analog-clock-->
-              </div> <!--analog-container-->
-              <div id="bottom-area">
-                <div id="clock3">
-                  <p class="time3">{{ time3 }}</p>
-                </div> <!--clock-->
-
-
-
-
-                <p><label for="selector-of-timezone3">
-                    <select id="selector-of-timezone3" @change="onChange($event)" v-model="timezone3">
-                        <option disabled selected value>Choose a timezone</option>
-                        <option value=0>UTC-12:00</option>
-                        <option value=1>UTC-11:00</option>
-                        <option value=2>UTC-10:00</option>
-                        <option value=3>UTC-09:30</option>
-                        <option value=4>UTC-09:00</option>
-                        <option value=5>UTC-08:00</option>
-                        <option value=6>UTC-07:00</option>
-                        <option value=7>UTC-06:00</option>
-                        <option value=8>UTC-05:00</option>
-                        <option value=9>UTC-04:00</option>
-                        <option value=10>UTC-03:30</option>
-                        <option value=11>UTC-03:00</option>
-                        <option value=12>UTC-02:00</option>
-                        <option value=13>UTC-01:00</option>
-                        <option value=14>UTC±00:00</option>
-                        <option value=15>UTC+01:00</option>
-                        <option value=16>UTC+02:00</option>
-                        <option value=17>UTC+03:00</option>
-                        <option value=18>UTC+03:30</option>
-                        <option value=19>UTC+04:00</option>
-                        <option value=20>UTC+04:30</option>
-                        <option value=21>UTC+05:00</option>
-                        <option value=22>UTC+05:30</option>
-                        <option value=23>UTC+05:45</option>
-                        <option value=24>UTC+06:00</option>
-                        <option value=25>UTC+06:30</option>
-                        <option value=26>UTC+07:00</option>
-                        <option value=27>UTC+08:00</option>
-                        <option value=28>UTC+08:45</option>
-                        <option value=29>UTC+09:00</option>
-                        <option value=30>UTC+09:30</option>
-                        <option value=31>UTC+10:00</option>
-                        <option value=32>UTC+10:30</option>
-                        <option value=33>UTC+11:00</option>
-                        <option value=34>UTC+12:00</option>
-                        <option value=35>UTC+12:45</option>
-                        <option value=36>UTC+13:00</option>
-                        <option value=37>UTC+14:00</option>
-                    </select>
-                </label></p> <!--selector-of-timezone-->
-              </div> <!--bottom area-->
-            </div> <!--clock-area-->
-
-
-      </div> <!--wholePage-->
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-        <script src="js/clock.js"></script>
-    </body>
+            <p><label for="selector-of-timezone3">
+              <select id="selector-of-timezone3" @change="onChange($event)" v-model="timezone3">
+                <option disabled selected value>Choose a timezone</option>
+                <option value=0>UTC-12:00</option>
+                <option value=1>UTC-11:00</option>
+                <option value=2>UTC-10:00</option>
+                <option value=3>UTC-09:30</option>
+                <option value=4>UTC-09:00</option>
+                <option value=5>UTC-08:00</option>
+                <option value=6>UTC-07:00</option>
+                <option value=7>UTC-06:00</option>
+                <option value=8>UTC-05:00</option>
+                <option value=9>UTC-04:00</option>
+                <option value=10>UTC-03:30</option>
+                <option value=11>UTC-03:00</option>
+                <option value=12>UTC-02:00</option>
+                <option value=13>UTC-01:00</option>
+                <option value=14>UTC±00:00</option>
+                <option value=15>UTC+01:00</option>
+                <option value=16>UTC+02:00</option>
+                <option value=17>UTC+03:00</option>
+                <option value=18>UTC+03:30</option>
+                <option value=19>UTC+04:00</option>
+                <option value=20>UTC+04:30</option>
+                <option value=21>UTC+05:00</option>
+                <option value=22>UTC+05:30</option>
+                <option value=23>UTC+05:45</option>
+                <option value=24>UTC+06:00</option>
+                <option value=25>UTC+06:30</option>
+                <option value=26>UTC+07:00</option>
+                <option value=27>UTC+08:00</option>
+                <option value=28>UTC+08:45</option>
+                <option value=29>UTC+09:00</option>
+                <option value=30>UTC+09:30</option>
+                <option value=31>UTC+10:00</option>
+                <option value=32>UTC+10:30</option>
+                <option value=33>UTC+11:00</option>
+                <option value=34>UTC+12:00</option>
+                <option value=35>UTC+12:45</option>
+                <option value=36>UTC+13:00</option>
+                <option value=37>UTC+14:00</option>
+              </select>
+            </label></p> <!--selector-of-timezone-->
+          </div> <!--bottom area-->
+        </div> <!--clock-area-->
+      </div> <!--mainDiv-->
+    </div> <!--wholePage-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/clock.js"></script>
+  </body>
 </html>
