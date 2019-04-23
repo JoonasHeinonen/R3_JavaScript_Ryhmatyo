@@ -1,12 +1,15 @@
 // Initialize global variables for general changes, e.g. background image
 var bgImgNumber;
 
-var bgImg = document.getElementById("wholePage");
+var body = document.body;
 
 var initializeBackground = function(number) {
   this.bgImgNumber = number;
-  bgImg.style.background = "url('./images/image" + bgImgNumber + ".jpg')";
-  bgImg.style.backgroundSize = "100% 100%";
+  body.style.background = "url('./images/image" + bgImgNumber + ".jpg')";
+  body.style.backgroundSize = "100% 100%";
+  body.style.backgroundAttachment = "fixed";
+  body.style.backgroundPosition = "center";
+  body.style.backgroundRepeat = "no-repeat";
 }
 
 initializeBackground(99);
