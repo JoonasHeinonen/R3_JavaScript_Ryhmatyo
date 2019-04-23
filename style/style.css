@@ -27,7 +27,6 @@ html, body {
     margin-left: 0.1em;
     margin-right: 0.1em;
     align-items: center;
-    /*float: left;*/
     justify-content: center;
 
 }
@@ -45,9 +44,7 @@ html, body {
     margin-left: 0.1em;
     margin-right: 0.1em;
     align-items: center;
-    /*float: none;*/
     justify-content: center;
-    /*opacity: 0.9;*/
     visibility: hidden;
 
 }
@@ -65,12 +62,7 @@ html, body {
     margin-left: 0.1em;
     margin-right: 0.1em;
     align-items: center;
-    /*float: right;*/
     justify-content: center;
-    /*position: absolute;
-    top: 0px;
-    right: 0px;
-    opacity: 0.9;*/
     visibility: hidden;
 }
 
